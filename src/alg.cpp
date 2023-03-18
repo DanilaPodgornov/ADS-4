@@ -2,7 +2,6 @@
 int cbinsearch(int* arr, int size, int value) {
     int startIndex = 0;
     int endIndex = size - 1;
-
     while (startIndex <= endIndex) {
         int middleIndex = startIndex + (endIndex - startIndex) / 2;
         if (value == arr[middleIndex]) {
@@ -64,7 +63,7 @@ int countPairs3(int *arr, int len, int value) {
     int count = 0;
     int border = 0;
     while (arr[i] < value / 2) {
-        count += cbinsearch(arr + i + 1, len - i - 1, value - arr[i]);//2 + 2 + 
+        count += cbinsearch(arr + i + 1, len - i - 1, value - arr[i]);
         i++;
     }
     while (arr[i] == value / 2) {
